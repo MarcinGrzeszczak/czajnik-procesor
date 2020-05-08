@@ -67,7 +67,7 @@ module czajnik(
     output reg [7:0] BYTE1
     */
     FD tempFd (currentTemperature[10:4], RDY_reading, savedTemperature);
-    TemperatureHandler temperatureHandler(clk_100MHz, startComparing, RDY_reading, settedTemperature, savedTemperature, ACK_reading, resetControls ,enableBuzzerHandlerWire ,enableHeater);
+    TemperatureHandler temperatureHandler(clk_100MHz, startComparing, RDY_reading, settedTemperature, savedTemperature, ACK_reading, resetControls, enableHeater);
     /*
         input clk,
         input enable,

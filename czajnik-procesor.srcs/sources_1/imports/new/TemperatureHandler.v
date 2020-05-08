@@ -28,7 +28,6 @@ module TemperatureHandler(
         input[6:0] tempratureSensorData,
         output reg comparingFinished=0,
         output reg finished = 0,
-        output reg buzzerEnable = 0,
         output reg heaterEnable = 0
     );
     
@@ -48,7 +47,6 @@ module TemperatureHandler(
         case (st)
             3'd1: begin
                 comparingFinished <=0;
-                buzzerEnable <=0;
                 if(temperatureReady)
                     st<= 3'd2;
             end
@@ -78,7 +76,6 @@ module TemperatureHandler(
             end
             
             3'd5: begin
-                 buzzerEnable <= 1;
                  finished <=1;
                  st <= 3'd1;
             end
