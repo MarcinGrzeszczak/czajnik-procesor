@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x0" bd:synthFlowMode="Hierarchical" bd:tool_version="2017.4" bd:top="czajnik_design" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x0" bd:device="xc7z020clg400-3" bd:synthFlowMode="Hierarchical" bd:tool_version="2017.4" bd:top="czajnik_design" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -28,6 +28,29 @@
     <spirit:library>BlockDiagram</spirit:library>
     <spirit:name>czajnik_design_imp</spirit:name>
     <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>PBlazeZH_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="PBlazeZH" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">czajnik_design_PBlazeZH_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>PBLAZE_DOWNLOADER_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="PBLAZE_DOWNLOADER" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">czajnik_design_PBLAZE_DOWNLOADER_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>czajnik_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="czajnik" spirit:vendor="xilinx.com" spirit:version="2.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">czajnik_design_czajnik_0_3</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
   </spirit:design>
 
 </bd:repository>

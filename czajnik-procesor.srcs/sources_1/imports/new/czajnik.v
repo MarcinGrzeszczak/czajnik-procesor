@@ -24,13 +24,16 @@ module czajnik(
       input clk_100MHz,
       inout BUS_OW,
       input RESET_OW,
+      input [6:0] settedTemperature,
+      input start,
+      input enableMaintain,
       output reset_therm,
+      output [15:0]currTemp,
       output enableHeater
     );
     
     wire clk_1Hz;
     wire clk_1MHz;
-    wire [6:0] settedTemperature;
     
     wire resetDS18B20;
     wire BUS_IN;
@@ -43,7 +46,8 @@ module czajnik(
     wire reset;  
     wire startComparing; 
     wire resetControls;
-    
+   
+   assign currTemp = currentTemperature;
    assign reset = resetDS18B20 & RESET_OW;
    bufif0(BUS_OW,1'b0,BUS_OUT);
    assign BUS_IN = BUS_OW === 1'bZ ? 1'b1 : 1'b0;
