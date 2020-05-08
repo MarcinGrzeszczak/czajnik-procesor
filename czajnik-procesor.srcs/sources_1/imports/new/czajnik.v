@@ -22,15 +22,10 @@
 
 module czajnik(
       input clk_100MHz,
-      input increaseHeatButton,
-      input heatMaintainButton,
       inout BUS_OW,
       input RESET_OW,
       output reset_therm,
-      output enableHeater,
-      output enableBuzzer,
-      output [2:0] displayNumber,
-      output [6:0] ledsOutput
+      output enableHeater
     );
     
     wire clk_1Hz;
@@ -48,9 +43,6 @@ module czajnik(
     wire reset;  
     wire startComparing; 
     wire resetControls;
-    wire controlRequiredDisplay;
-    wire enableBuzzerHandlerWire;
-    wire [6:0] displayTemp = controlRequiredDisplay ? settedTemperature : savedTemperature;
     
    assign reset = resetDS18B20 & RESET_OW;
    bufif0(BUS_OW,1'b0,BUS_OUT);
@@ -59,9 +51,7 @@ module czajnik(
    
     ClockDivider #(1) clockDivider_1Hz (clk_100MHz, clk_1Hz);
     ClockDivider #(1000000) clockDivider_1Mhz(clk_100MHz, clk_1MHz);
-    
-    Display display(clk_100MHz,displayTemp, displayNumber,ledsOutput);
-    
+      
     DS18B20 t_controller(clk_100MHz, clk_1MHz, reset, BUS_IN, , BUS_OUT, , RDY_reading, currentTemperature[15:8], currentTemperature[7:0]);
     EnableThermometer enableThermometer(clk_100MHz, ACK_reading, resetDS18B20);
     /*
@@ -77,17 +67,6 @@ module czajnik(
     output reg [7:0] BYTE1
     */
     FD tempFd (currentTemperature[10:4], RDY_reading, savedTemperature);
-    Controls controls(clk_1Hz, increaseHeatButton, heatMaintainButton, resetControls, controlRequiredDisplay, settedTemperature, startComparing);
-    /*
-        input clk_1Hz,
-        input increaseHeatButton,
-        input heatMaintainButton,
-        input reset,
-        output displayRequired,
-        output [6:0] settedTemperature,
-        output start
-    */
-    
     TemperatureHandler temperatureHandler(clk_100MHz, startComparing, RDY_reading, settedTemperature, savedTemperature, ACK_reading, resetControls ,enableBuzzerHandlerWire ,enableHeater);
     /*
         input clk,
@@ -101,10 +80,4 @@ module czajnik(
         output reg heaterEnable = 0
     */
     
-    BuzzerHandler buzzer(clk_1Hz, enableBuzzerHandlerWire, enableBuzzer);
-    /*
-      input clk,
-        input start,
-        output reg enableBuzzer = 0
-    */
 endmodule
