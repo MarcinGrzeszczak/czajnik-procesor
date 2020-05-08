@@ -155,16 +155,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/new/Controls.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../czajnik/czajnik.srcs/sources_1/new/Controls.v"/>
-          <Attr Name="ImportTime" Val="1588006157"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/new/EnableHeatMaintain.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
