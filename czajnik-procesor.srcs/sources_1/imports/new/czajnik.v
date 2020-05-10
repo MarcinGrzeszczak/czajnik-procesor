@@ -43,8 +43,7 @@ module czajnik(
     
     wire [15:0] currentTemperature;
     wire [6:0] savedTemperature;
-    wire reset;  
-    wire startComparing; 
+    wire reset;
     wire resetControls;
    
    assign currTemp = savedTemperature;
@@ -71,7 +70,7 @@ module czajnik(
     output reg [7:0] BYTE1
     */
     FD tempFd (currentTemperature[10:4], RDY_reading, savedTemperature);
-    TemperatureHandler temperatureHandler(clk_100MHz, startComparing, RDY_reading, settedTemperature, savedTemperature, ACK_reading, resetControls, enableHeater);
+    TemperatureHandler temperatureHandler(clk_100MHz, start, RDY_reading, settedTemp, savedTemperature, ACK_reading, resetControls, enableHeater);
     /*
         input clk,
         input enable,
