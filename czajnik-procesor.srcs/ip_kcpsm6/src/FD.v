@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 30.05.2019 13:24:36
+// Create Date: 08.06.2019 19:59:04
 // Design Name: 
-// Module Name: Display
+// Module Name: FD
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,18 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Display(
-    input clk_100Mhz,
-    input [7:0] data,
-    output [2:0] displayNumber,
-    output [6:0] ledsOutput
+module FD(
+        input [6:0] d,
+        input c,
+        output reg [6:0] q
     );
     
-    wire [11:0] bcdNumber;
-    wire clk_10kHz;
-    
-    ClockDivider #(10000) clockDivider_10kHz(clk_100Mhz, clk_10kHz);
-    
-    DisplayController displayController(clk_10kHz, bcdNumber, displayNumber, ledsOutput);
-        
+    always @(posedge c)
+        q<=d;
 endmodule

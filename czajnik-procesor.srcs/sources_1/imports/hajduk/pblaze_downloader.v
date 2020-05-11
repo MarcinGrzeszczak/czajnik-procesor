@@ -20,7 +20,7 @@
 module PBLAZE_DOWNLOADER
        #(parameter K=1,N=1,DB=24)
        (input CLK,ON_OFF,RST,
-        input [9:0] ADDRESS,
+        input [11:0] ADDRESS,
         output [17:0] INSTRUCTION,
         input TX_INT,RX,
         output RX_INT,TX,ACTIVE);

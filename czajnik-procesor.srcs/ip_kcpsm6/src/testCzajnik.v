@@ -40,9 +40,7 @@ wire checkTemperature;
 reg [6:0] settedTemp;
 reg start;
 reg enableMaintain;
-wire [3:0] currTempONES;
-wire[3:0] currTempTENS;
-wire[3:0] currTempHUNDREDS;
+wire [6:0] outputTemp;
 wire enableHeater;
 
 assign rst = RST_OW & reset_therm; 
@@ -81,18 +79,16 @@ always @(posedge clk_100Mhz) begin
 
  DS18B20Mock sensorMock(CLK_1MHZ, rst, temperature , BUS_IN, BUS_OUT, checkTemperature);
 
- czajnik czajnik1(clk_100Mhz,BUS_OW,RST_OW,settedTemp,start,enableMaintain,reset_therm,currTempONES,currTempTENS,currTempHUNDREDS,enableHeater);
+ czajnik czajnik1(clk_100Mhz,BUS_OW,RST_OW,settedTemp,start,enableMaintain,reset_therm,outputTemp,enableHeater);
     /*
-     input clk_100MHz,
-          inout BUS_OW,
-          input RESET_OW,
-          input [6:0] settedTemp,
-          input start,
-          input enableMaintain,
-          output reset_therm,
-          output[3:0] currTempONES,
-          output[3:0] currTempTENS,
-          output[3:0] currTempHUNDREDS,
-          output enableHeater
+      input clk_100MHz,
+      inout BUS_OW,
+      input RESET_OW,
+      input [6:0] settedTemp,
+      input start,
+      input enableMaintain,
+      output reset_therm,
+      output [6:0]currTemp,
+      output enableHeater
     */
 endmodule

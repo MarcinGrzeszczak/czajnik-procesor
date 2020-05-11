@@ -1,0 +1,182 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon May 11 02:12:43 2020
+# Process ID: 7584
+# Current directory: D:/proj/czajnik-procesor
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1912 D:\proj\czajnik-procesor\czajnik-procesor.xpr
+# Log file: D:/proj/czajnik-procesor/vivado.log
+# Journal file: D:/proj/czajnik-procesor\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/proj/czajnik-procesor/czajnik-procesor.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/czajnik'.
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/PBlazeZH'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/czajnik'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/PBDownloaderZH'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/PBlazeZH'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2017.4/data/ip'.
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/Verilog/kcpsm6.v] -no_script -reset -force -quiet
+remove_files  D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/Verilog/kcpsm6.v
+file delete -force D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/Verilog/kcpsm6.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+import_files -norecurse D:/proj/KCPSM6_Release9_30Sept14/kcpsm6.vhd
+update_compile_order -fileset sources_1
+set_property top kcpsm6 [current_fileset]
+update_compile_order -fileset sources_1
+ipx::package_project -root_dir d:/proj/czajnik-procesor/czajnik-procesor.srcs/ip_kcpsm6 -vendor xilinx.com -library user -taxonomy /UserIP -import_files -set_current false
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/new/ClockDivider.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/new/EnableThermometer.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/new/TemperatureHandler.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/ds18b20.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/ow_read.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/ow_reset.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/ow_write.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/timer.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/new/czajnik.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/bd/design_czajnik/design_czajnik.bd'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/new/Bin2Bcd.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/new/BuzzerHandler.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/new/Display.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/new/DisplayController.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/new/EnableHeatMaintain.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/new/IncreaseTemperature.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/new/MuxIn.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/new/PortDecoder.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/pblaze_downloader.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/serial_clock.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/serial_rx.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/serial_tx.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/serial_tx_fifo.v'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'reset' as interface 'reset'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-4753] Inferred signal 'interrupt' from port 'interrupt' as interface 'interrupt'.
+INFO: [IP_Flow 19-4728] Bus Interface 'interrupt': Added interface parameter 'SENSITIVITY' with value 'LEVEL_HIGH'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+ipx::unload_core d:/proj/czajnik-procesor/czajnik-procesor.srcs/ip_kcpsm6/component.xml
+ipx::edit_ip_in_project -upgrade true -name tmp_edit_project -directory d:/proj/czajnik-procesor/czajnik-procesor.srcs/ip_kcpsm6 d:/proj/czajnik-procesor/czajnik-procesor.srcs/ip_kcpsm6/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2017.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/czajnik'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/PBDownloaderZH'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/PBlazeZH'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+set_property  ip_repo_paths  {d:/proj/czajnik-procesor/czajnik-procesor.srcs/ip_kcpsm6 d:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/czajnik d:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/PBDownloaderZH d:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/PBlazeZH} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/proj/czajnik-procesor/czajnik-procesor.srcs/ip_kcpsm6'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/czajnik'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/PBDownloaderZH'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/PBlazeZH'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+open_bd_design {D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/bd/design_czajnik/design_czajnik.bd}
+Successfully read diagram <design_czajnik> from BD file <D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/bd/design_czajnik/design_czajnik.bd>
+open_bd_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 993.277 ; gain = 66.563
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:kcpsm6:1.0 kcpsm6_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:PBLAZE_DOWNLOADER:1.0 PBLAZE_DOWNLOADER_0
+endgroup
+set_property location {0.5 -133 -154} [get_bd_cells PBLAZE_DOWNLOADER_0]
+set_property location {1.5 263 -144} [get_bd_cells kcpsm6_0]
+set_property top PBLAZE_DOWNLOADER [current_fileset]
+update_compile_order -fileset sources_1
+ipx::package_project -root_dir d:/proj/czajnik-procesor/czajnik-procesor.srcs/ip_downloader -vendor xilinx.com -library user -taxonomy /UserIP -import_files -set_current false
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/new/FD.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/KCPSM6_Release9_30Sept14/kcpsm6.vhd'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/new/ClockDivider.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/new/EnableThermometer.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/new/TemperatureHandler.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/ds18b20.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/ow_read.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/ow_reset.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/ow_write.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/timer.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/new/czajnik.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/bd/design_czajnik/design_czajnik.bd'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/new/Bin2Bcd.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/new/BuzzerHandler.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/new/Display.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/new/DisplayController.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/new/EnableHeatMaintain.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/new/IncreaseTemperature.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/new/MuxIn.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/new/PortDecoder.v'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'RST' as interface 'RST'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'CLK' as interface 'CLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'CLK': Added interface parameter 'ASSOCIATED_RESET' with value 'RST'.
+ipx::unload_core d:/proj/czajnik-procesor/czajnik-procesor.srcs/ip_downloader/component.xml
+ipx::edit_ip_in_project -upgrade true -name tmp_edit_project -directory d:/proj/czajnik-procesor/czajnik-procesor.srcs/ip_downloader d:/proj/czajnik-procesor/czajnik-procesor.srcs/ip_downloader/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2017.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/proj/czajnik-procesor/czajnik-procesor.srcs/ip_kcpsm6'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/czajnik'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/PBDownloaderZH'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/PBlazeZH'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+set_property  ip_repo_paths  {d:/proj/czajnik-procesor/czajnik-procesor.srcs/ip_downloader d:/proj/czajnik-procesor/czajnik-procesor.srcs/ip_kcpsm6 d:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/czajnik d:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/PBDownloaderZH d:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/PBlazeZH} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/proj/czajnik-procesor/czajnik-procesor.srcs/ip_downloader'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/proj/czajnik-procesor/czajnik-procesor.srcs/ip_kcpsm6'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/czajnik'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/PBDownloaderZH'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/PBlazeZH'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+CRITICAL WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:PBLAZE_DOWNLOADER:1.0'. The one found in IP location 'd:/proj/czajnik-procesor/czajnik-procesor.srcs/ip_downloader' will take precedence over the same IP in location d:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/imports/hajduk/PBDownloaderZH
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  design_czajnik_PBLAZE_DOWNLOADER_0_0] -log ip_upgrade.log
+Upgrading 'D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/bd/design_czajnik/design_czajnik.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_czajnik_PBLAZE_DOWNLOADER_0_0 from PBLAZE_DOWNLOADER_v1_0 1.0 to PBLAZE_DOWNLOADER_v1_0 1.0
+WARNING: [IP_Flow 19-4706] Upgraded port 'ADDRESS' width 12 differs from original width 10
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_czajnik_PBLAZE_DOWNLOADER_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'design_czajnik_PBLAZE_DOWNLOADER_0_0' has identified issues that may require user intervention. Please review the upgrade log 'd:/proj/czajnik-procesor/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+Wrote  : <D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/bd/design_czajnik/design_czajnik.bd> 
+Wrote  : <D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/bd/design_czajnik/ui/bd_d91e37af.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/proj/czajnik-procesor/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_czajnik_PBLAZE_DOWNLOADER_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/bd/design_czajnik/design_czajnik.bd]
+ERROR: [BD 41-758] The following clock pins are not connected to a valid clock source: 
+/kcpsm6_0/clk
+/PBLAZE_DOWNLOADER_0/CLK
+
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/bd/design_czajnik/design_czajnik.bd 
+ERROR: [Common 17-39] 'generate_target' failed due to earlier errors.
+export_ip_user_files -of_objects  [get_files D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/bd/design_czajnik/design_czajnik.bd] -no_script -reset -force -quiet
+remove_files  D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/bd/design_czajnik/design_czajnik.bd
+file delete -force D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/bd/design_czajnik
+create_bd_design "design_czajnik"
+Wrote  : <D:/proj/czajnik-procesor/czajnik-procesor.srcs/sources_1/bd/design_czajnik/design_czajnik.bd> 
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon May 11 02:21:50 2020...
